@@ -74,11 +74,11 @@ def main() -> None:
     uploaded_file: Any = st.file_uploader("Please choose a file to upload", type="jpg")
     if uploaded_file is not None:
         bytes_data: Any = uploaded_file.getvalue()
-        with open(uploaded_file.name, "wb") as file:
+        with open(uploaded_file.new img.jpg, "wb") as file:
             file.write(bytes_data)
         st.image(uploaded_file, caption="Uploaded Image", use_column_width=True)
         progress_bar(100)
-        scenario: str = generate_text_from_image(uploaded_file.name)
+        scenario: str = generate_text_from_image(uploaded_file.new img.jpg)
         story: str = generate_story_from_text(scenario)
         with st.expander("Generated Image scenario"):
             st.write(scenario)
